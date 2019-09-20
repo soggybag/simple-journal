@@ -1,6 +1,6 @@
 # Simple Journal
 
-A simple Bullet Journal. 
+A simple Bullet Journal. Try it out [here](https://soggybag.github.io/simple-journal/).
 
 In a nut shell the Simple Journal consists of a series of bullet point lists. Items in a list are marked with a status. 
 
