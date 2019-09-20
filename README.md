@@ -17,10 +17,33 @@ The app uses React for View managment and Redux for state management. The app pe
 
 ## Todo
 
-- Post to Github Pages
-- Move list of Entries to left column
+- Contributions
+  - Add Contribution guidelines
+  - Move todos to issues and tag
+- Add ditable title to each entry
+  - Generate default Entry title with short date - `09/19/19`
+- Save for later 
+  - Move `<` items to saved for later list
+  - Add a reducer for saved for later
 - Add styles 
+  - Basic font styles 
+    - Use the framework?
+  - Layout
+    - Move list of Entries to left column
+    - Mockup layouts
+  - Status Selector styles
+    - Web Component?
+    - CSS Drop Down?s
+    - Existing React component?
+- Add notifications 
+  - Reminder to add events at the beginning of the day
+  - Reminder at the end of the day
+- ~~Post to Github Pages~~
 - ~~Adding an entry should grab the Items with status `>`~~
 - ~~New Entry button functional~~
 - ~~Remove Add Entry section at top~~
 - ~~Use Local Storage~~
+
+## Contributions 
+
+Coming soon...
