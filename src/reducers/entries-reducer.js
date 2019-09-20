@@ -2,9 +2,9 @@ import { ADD_ENTRY } from '../actions'
 
 // State is a list of Objects
 
-const defaultState = () => {
+const defaultState = (name = 'Entry 1') => {
   return [
-    { name: 'default', date: new Date() }
+    { name, date: new Date() }
   ]
 }
 
@@ -13,7 +13,8 @@ const entriesReducer = (state = defaultState(), action) => {
 
   switch(type) {
     case ADD_ENTRY: 
-      return [...state, { name: payload.name, date: new Date() }]
+      const name = `Entry ${state.length + 1}`
+      return [...state, { name, date: new Date() }]
 
     default: 
       return state

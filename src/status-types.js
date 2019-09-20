@@ -1,0 +1,6 @@
+export const STATUS_DEFAULT = '•'
+export const STATUS_COMPLETE = 'X'
+export const STATUS_INCOMPLETE = '>'
+export const STATUS_SAVE = '<'
+export const STATUS_NOTE = '–'
+export const STATUS_EVENT = '!'

@@ -13,7 +13,6 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <AddList />
         <ListEntries />
         <ShowEntry />
       </div>

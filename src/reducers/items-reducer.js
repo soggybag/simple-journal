@@ -1,4 +1,5 @@
 import { ADD_ENTRY, ADD_ITEM, CHANGE_STATUS, CHANGE_TEXT } from '../actions'
+import { STATUS_DEFAULT, STATUS_INCOMPLETE } from '../status-types'
 
 // A list of lists of items
 
@@ -6,7 +7,7 @@ const defaultState = () => {
   return [[]]
 }
 
-const makeItem = (text, status = '•') => {
+const makeItem = (text, status = STATUS_DEFAULT) => {
   return {
     text, 
     status
@@ -15,9 +16,13 @@ const makeItem = (text, status = '•') => {
 
 const itemsReducer = (state = defaultState(), action) => {
   const { type, payload } = action
+
   switch(type) {
     case ADD_ENTRY: 
-      const carryOverItems = state.filter(item => item.status === '>')
+      const carryOverItems = state[state.length - 1]
+        .filter(item => item.status === STATUS_INCOMPLETE)
+        .map(item => ({...item}))
+        
       return [...state, carryOverItems]
 
     case ADD_ITEM: 
@@ -26,7 +31,6 @@ const itemsReducer = (state = defaultState(), action) => {
       return newState
     
     case CHANGE_STATUS: 
-      console.log(state)
       return state.map((list, i) => {
         if (i === payload.entryIndex) {
           return list.map((item, j) => {
@@ -40,7 +44,6 @@ const itemsReducer = (state = defaultState(), action) => {
       })
     
     case CHANGE_TEXT: 
-      console.log(state)
       return state.map((list, i) => {
         if (i === payload.entryIndex) {
           return list.map((item, j) => {

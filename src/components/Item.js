@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import StatusSelector from './StatusSelector'
-import ItemInput from './ItemInput'
 import { connect } from 'react-redux'
 import { changeStatus, changeText } from '../actions'
 
 const Item = (props) => {
-  const [status, setStatus] = useState(props.status)
+  // const [status, setStatus] = useState(props.status)
   const [text, setText] = useState(props.text)
 
   return (

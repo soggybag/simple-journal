@@ -15,6 +15,7 @@ export const ListEntries = (props) => {
   })
   return (
     <div>
+      <h1>Entries</h1>
       {entries}
     </div>
   )
@@ -22,7 +23,8 @@ export const ListEntries = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    entries: state.entries
+    entries: state.entries,
+    currentEntry: state.journal.currentEntry
   }
 }
 
