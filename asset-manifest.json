@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/soggybag/simple-journal/static/css/main.2cce8147.chunk.css",
-    "main.js": "/soggybag/simple-journal/static/js/main.92e81887.chunk.js",
-    "main.js.map": "/soggybag/simple-journal/static/js/main.92e81887.chunk.js.map",
-    "runtime~main.js": "/soggybag/simple-journal/static/js/runtime~main.ea776e0f.js",
-    "runtime~main.js.map": "/soggybag/simple-journal/static/js/runtime~main.ea776e0f.js.map",
-    "static/js/2.9eaf9848.chunk.js": "/soggybag/simple-journal/static/js/2.9eaf9848.chunk.js",
-    "static/js/2.9eaf9848.chunk.js.map": "/soggybag/simple-journal/static/js/2.9eaf9848.chunk.js.map",
-    "index.html": "/soggybag/simple-journal/index.html",
-    "precache-manifest.5ce9c4e82073d65689803bfada1dcdc0.js": "/soggybag/simple-journal/precache-manifest.5ce9c4e82073d65689803bfada1dcdc0.js",
-    "service-worker.js": "/soggybag/simple-journal/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/soggybag/simple-journal/static/css/main.2cce8147.chunk.css.map"
+    "main.css": "/simple-journal/static/css/main.2cce8147.chunk.css",
+    "main.js": "/simple-journal/static/js/main.9e5fe833.chunk.js",
+    "main.js.map": "/simple-journal/static/js/main.9e5fe833.chunk.js.map",
+    "runtime~main.js": "/simple-journal/static/js/runtime~main.4305537b.js",
+    "runtime~main.js.map": "/simple-journal/static/js/runtime~main.4305537b.js.map",
+    "static/js/2.9eaf9848.chunk.js": "/simple-journal/static/js/2.9eaf9848.chunk.js",
+    "static/js/2.9eaf9848.chunk.js.map": "/simple-journal/static/js/2.9eaf9848.chunk.js.map",
+    "index.html": "/simple-journal/index.html",
+    "precache-manifest.0f727a2350e972073c90732692f2589e.js": "/simple-journal/precache-manifest.0f727a2350e972073c90732692f2589e.js",
+    "service-worker.js": "/simple-journal/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/simple-journal/static/css/main.2cce8147.chunk.css.map"
   }
 }
