@@ -1,12 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Item from './Item'
+import journalReducer from '../reducers/journal-reducer'
+
 
 const ListItems = (props) => {
   const items = props.items.map((item, index) => {
     return (
       <Item
         key={`item-${index}`}
+        entryIndex={props.currentEntry}
+        index={index}
         status={item.status}
         text={item.text}
       />
@@ -20,9 +24,11 @@ const ListItems = (props) => {
 }
 
 const mapStateToProps = (state) => {
-  const { currentEntry, entries } = state.journal
+  const { journal, items } = state
+
   return {
-    items: entries[currentEntry].list
+    currentEntry: journal.currentEntry,
+    items: items[journal.currentEntry]
   }
 }
 

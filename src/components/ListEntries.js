@@ -3,8 +3,7 @@ import { connect } from 'react-redux'
 import { selectEntry } from '../actions'
 
 export const ListEntries = (props) => {
-  const { journal } = props
-  const journalList = journal.map((item, index) => {
+  const entries = props.entries.map((item, index) => {
     return (
       <button
         key={`${item.name}-${index}`}
@@ -16,14 +15,14 @@ export const ListEntries = (props) => {
   })
   return (
     <div>
-      {journalList}
+      {entries}
     </div>
   )
 }
 
 const mapStateToProps = (state) => {
   return {
-    journal: state.journal.entries
+    entries: state.entries
   }
 }
 

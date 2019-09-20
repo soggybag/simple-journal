@@ -1,5 +1,6 @@
 export const ADD_ITEM = 'ADD_ITEM'
-export const SET_STATUS = 'SET_STATUS'
+export const CHANGE_STATUS = 'CHANGE_STATUS'
+export const CHANGE_TEXT = 'CHANGE_TEXT'
 export const ADD_ENTRY = 'ADD_ENTRY'
 export const SELECT_ENTRY = 'SELECT_ENTRY'
 
@@ -10,16 +11,24 @@ export const addEntry = (name) => {
   }
 }
 
-export const addItem = (index, status, text) => {
+export const addItem = (index, text) => {
   return {
     type: ADD_ITEM,
-    payload: { index, status, text }
+    payload: { index, text }
   }
 }
 
-export const setStatus = (index, status) => {
+export const changeStatus = (entryIndex, index, status) => {
   return {
-    type: SET_STATUS
+    type: CHANGE_STATUS,
+    payload: { entryIndex, index, status }
+  }
+}
+
+export const changeText = (entryIndex, index, text) => {
+  return {
+    type: CHANGE_TEXT,
+    payload: { entryIndex, index, text }
   }
 }
 

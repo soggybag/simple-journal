@@ -10,3 +10,4 @@ A simple Bullet Journal.
 - Remove Add Entry section at top
 - Move list of Entries to left column
 - Add styles 
+- Use Local Storage

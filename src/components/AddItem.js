@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { addItem } from '../actions'
 
-import StatusSelector from './StatusSelector'
-
 const AddItem = (props) => {
   const [ text, setText ] = useState('')
 
@@ -21,7 +19,7 @@ const AddItem = (props) => {
 
       <button
         onClick={() => {
-          props.addItem(props.index, '•', text)
+          props.addItem(props.entryIndex, text)
           setText('')
         }}
       >+</button>
