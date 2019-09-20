@@ -31,6 +31,8 @@ The app uses React for View managment and Redux for state management. The app pe
 - Save for later 
   - Move `<` items to saved for later list
   - Add a reducer for saved for later
+- Add New Journal
+  - Group entires under journals
 - Add styles 
   - Basic font styles 
     - Use the framework?
