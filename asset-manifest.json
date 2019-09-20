@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/soggybag/simple-journal/static/css/main.2cce8147.chunk.css",
+    "main.js": "/soggybag/simple-journal/static/js/main.92e81887.chunk.js",
+    "main.js.map": "/soggybag/simple-journal/static/js/main.92e81887.chunk.js.map",
+    "runtime~main.js": "/soggybag/simple-journal/static/js/runtime~main.ea776e0f.js",
+    "runtime~main.js.map": "/soggybag/simple-journal/static/js/runtime~main.ea776e0f.js.map",
+    "static/js/2.9eaf9848.chunk.js": "/soggybag/simple-journal/static/js/2.9eaf9848.chunk.js",
+    "static/js/2.9eaf9848.chunk.js.map": "/soggybag/simple-journal/static/js/2.9eaf9848.chunk.js.map",
+    "index.html": "/soggybag/simple-journal/index.html",
+    "precache-manifest.5ce9c4e82073d65689803bfada1dcdc0.js": "/soggybag/simple-journal/precache-manifest.5ce9c4e82073d65689803bfada1dcdc0.js",
+    "service-worker.js": "/soggybag/simple-journal/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/soggybag/simple-journal/static/css/main.2cce8147.chunk.css.map"
+  }
+}
