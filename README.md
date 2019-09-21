@@ -17,7 +17,6 @@ The app uses React for View managment and Redux for state management. The app pe
 
 ## Todo
 
-- Should automatically navigate to the new entry after clicking new entry. Prevents confusion as users wonder if a new entry was created. 
 - Contributions
   - Add Contribution guidelines
   - Move todos to issues and tag
@@ -47,6 +46,8 @@ The app uses React for View managment and Redux for state management. The app pe
 - Add notifications 
   - Reminder to add events at the beginning of the day
   - Reminder at the end of the day
+- ~~Should automatically navigate to the new entry after clicking new entry~~ 
+  - Prevents confusion as users wonder if a new entry was created.
 - ~~Post to Github Pages~~
 - ~~Adding an entry should grab the Items with status `>`~~
 - ~~New Entry button functional~~
