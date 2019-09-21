@@ -14,7 +14,7 @@ export const ShowEntry = (props) => {
       <div>
         <button
           onClick={() => {
-            props.addEntry()
+            props.addEntry(null, props.entriesLength)
           }}
         >New Entry</button>
       </div>
@@ -26,6 +26,7 @@ const mapStateToProps = (state) => {
   const { journal, entries } = state
 
   return {
+    entriesLength: entries.length,
     currentEntry: journal.currentEntry,
     entry: entries[journal.currentEntry]
   }

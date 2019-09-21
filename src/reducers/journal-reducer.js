@@ -1,4 +1,4 @@
-import { SELECT_ENTRY } from '../actions'
+import { SELECT_ENTRY, ADD_ENTRY } from '../actions'
 
 const defaultState = () => {
   return {
@@ -12,6 +12,9 @@ const journalReducer = (state = defaultState(), action) => {
   switch(type) {
     case SELECT_ENTRY:
       return { ...state, currentEntry: payload.index }
+
+    case ADD_ENTRY: 
+      return { ...state, currentEntry: payload.length }
 
     default:
       return state

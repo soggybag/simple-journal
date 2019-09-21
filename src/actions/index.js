@@ -4,10 +4,10 @@ export const CHANGE_TEXT = 'CHANGE_TEXT'
 export const ADD_ENTRY = 'ADD_ENTRY'
 export const SELECT_ENTRY = 'SELECT_ENTRY'
 
-export const addEntry = (name) => {
+export const addEntry = (name, length) => {
   return {
     type: ADD_ENTRY,
-    payload: { name }
+    payload: { name, length }
   }
 }
 
