@@ -28,6 +28,9 @@ The app uses React for View managment and Redux for state management. The app pe
   - Delete button?
 - Add editable title to each entry
   - Generate default Entry title with short date - `09/19/19`
+- Ideas for possible features
+  - Add timer to items to get time spent
+  - Badge shows number of times an item has been passed along to a new entry
 - Save for later 
   - Move `<` items to saved for later list
   - Add a reducer for saved for later
