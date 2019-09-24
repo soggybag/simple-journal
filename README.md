@@ -23,9 +23,6 @@ The app uses React for View managment and Redux for state management. The app pe
 - List items can be arranged
   - Drag to arrange? 
   - Arrow to move up/down?
-- Delete list item
-  - Empty text? 
-  - Delete button?
 - Add editable title to each entry
   - Generate default Entry title with short date - `09/19/19`
 - Save for later 
