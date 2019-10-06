@@ -1,4 +1,4 @@
-import { ADD_ENTRY, ADD_ITEM, CHANGE_STATUS, CHANGE_TEXT } from '../actions'
+import { ADD_ENTRY, ADD_ITEM, CHANGE_STATUS, CHANGE_TEXT, REMOVE_ITEM } from '../actions'
 import { STATUS_DEFAULT, STATUS_INCOMPLETE } from '../status-types'
 
 // A list of lists of items
@@ -29,6 +29,9 @@ const itemsReducer = (state = defaultState(), action) => {
       const newState = [...state]
       newState[payload.index] = [ ...newState[payload.index], makeItem(payload.text) ]
       return newState
+
+    case REMOVE_ITEM: 
+      return state.map((entry, entryIndex) => entryIndex === payload.entryIndex ? entry.filter((item, index) => index !== payload.index) : entry);
     
     case CHANGE_STATUS: 
       return state.map((list, i) => {

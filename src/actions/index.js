@@ -1,4 +1,5 @@
 export const ADD_ITEM = 'ADD_ITEM'
+export const REMOVE_ITEM = 'REMOVE_ITEM'
 export const CHANGE_STATUS = 'CHANGE_STATUS'
 export const CHANGE_TEXT = 'CHANGE_TEXT'
 export const ADD_ENTRY = 'ADD_ENTRY'
@@ -29,6 +30,13 @@ export const changeText = (entryIndex, index, text) => {
   return {
     type: CHANGE_TEXT,
     payload: { entryIndex, index, text }
+  }
+}
+
+export const removeItem = (entryIndex, index) => {
+  return {
+    type: REMOVE_ITEM,
+    payload: { entryIndex, index }
   }
 }
 
