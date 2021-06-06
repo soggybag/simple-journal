@@ -1,14 +1,18 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { selectEntry } from '../actions'
 
 export const ListEntries = (props) => {
-  const entries = props.entries.map((item, index) => {
+  const dispatch = useDispatch()
+  const entries = useSelector(state => state.entries)
+  const currentEntry = useSelector(state => state.journal.currentEntry)
+
+  const entrieslist = entries.map((item, index) => {
     return (
       <button
         key={`${item.name}-${index}`}
         onClick={() => {
-          props.selectEntry(index)
+          dispatch(selectEntry(index))
         }}
       >{item.name}</button>
     )
@@ -16,16 +20,9 @@ export const ListEntries = (props) => {
   return (
     <div>
       <h1>Entries</h1>
-      {entries}
+      {entrieslist}
     </div>
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    entries: state.entries,
-    currentEntry: state.journal.currentEntry
-  }
-}
-
-export default connect(mapStateToProps, { selectEntry })(ListEntries)
+export default ListEntries

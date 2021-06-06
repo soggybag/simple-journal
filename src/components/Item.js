@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import StatusSelector from './StatusSelector'
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { changeStatus, changeText, removeItem } from '../actions'
 
 const Item = (props) => {
+  const dispatch = useDispatch()
   // const [status, setStatus] = useState(props.status)
   const [text, setText] = useState(props.text)
+
   const blurHandler = () => {
     if (text === "") {
-      props.removeItem(props.entryIndex, props.index);
+      dispatch(removeItem(props.entryIndex, props.index))
     } else {
-      props.changeText(props.entryIndex, props.index, text)
+      dispatch(changeText(props.entryIndex, props.index, text))
     }
   }
   const removeHandler = () => {
@@ -31,7 +33,7 @@ const Item = (props) => {
       <StatusSelector 
         status={props.status} 
         changeStatus={(status) => {
-          props.changeStatus(props.entryIndex, props.index, status)
+          dispatch(changeStatus(props.entryIndex, props.index, status))
         }} />
 
         <form onSubmit={submitHandler} style={{ display: "inline-block" }}>
@@ -49,4 +51,4 @@ const Item = (props) => {
   )
 }
 
-export default connect(null, { changeStatus, changeText, removeItem })(Item)
+export default Item

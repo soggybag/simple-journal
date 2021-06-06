@@ -1,9 +1,12 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import Item from './Item'
 
 const ListItems = (props) => {
-  const items = props.items.map((item, index) => {
+  const currentEntry = useSelector(state => state.journal.currentEntry)
+  const items = useSelector(state => state.items[state.journal.currentEntry])
+
+  const itemsList = items.map((item, index) => {
     return (
       <Item
         key={`item-${index}-${props.currentEntry}`}
@@ -16,18 +19,9 @@ const ListItems = (props) => {
   })
   return (
     <div>
-      {items}
+      {itemsList}
     </div>
   )
 }
 
-const mapStateToProps = (state) => {
-  const { journal, items } = state
-
-  return {
-    currentEntry: journal.currentEntry,
-    items: items[journal.currentEntry]
-  }
-}
-
-export default connect(mapStateToProps)(ListItems)
+export default ListItems

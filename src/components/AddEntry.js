@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addEntry } from '../actions'
 
 export const AddEntry = (props) => {
   const [name, setName] = useState('')
+  const dispatch = useDispatch()
 
   return (
     <div>
@@ -16,7 +17,7 @@ export const AddEntry = (props) => {
       />
       <button
         onClick={() => {
-          props.addEntry(name)
+          dispatch(addEntry(name))
           setName('')
         }}
       > + </button>
@@ -24,4 +25,4 @@ export const AddEntry = (props) => {
   )
 }
 
-export default connect(null, { addEntry })(AddEntry)
+export default AddEntry

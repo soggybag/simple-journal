@@ -1,4 +1,3 @@
-import React from 'react'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import reducers from './reducers'
@@ -6,7 +5,7 @@ import ListEntries from './components/ListEntries'
 import ShowEntry from './components/ShowEntry'
 import { loadState, saveState } from './local-store'
 
-import './App.css'
+import './App.css';
 
 const persistedState = loadState()
 const store = createStore(reducers, persistedState, 
@@ -26,4 +25,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

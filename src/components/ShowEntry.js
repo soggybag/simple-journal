@@ -1,10 +1,15 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import AddItem from './AddItem'
 import ListItems from './ListItems'
 import { addEntry } from '../actions'
 
 export const ShowEntry = (props) => {
+  const dispatch = useDispatch()
+  const entriesLength = useSelector(state => state.entries.length)
+  const currentEntry = useSelector(state => state.journal.currentEntry)
+  const entry = useSelector(state => state.entries[state.journal.currentEntry])
+
   return (
     <div>
       <h1>Show Entry</h1>
@@ -14,7 +19,7 @@ export const ShowEntry = (props) => {
       <div>
         <button
           onClick={() => {
-            props.addEntry(null, props.entriesLength)
+            dispatch(addEntry(null, props.entriesLength))
           }}
         >New Entry</button>
       </div>
@@ -22,14 +27,4 @@ export const ShowEntry = (props) => {
   )
 }
 
-const mapStateToProps = (state) => {
-  const { journal, entries } = state
-
-  return {
-    entriesLength: entries.length,
-    currentEntry: journal.currentEntry,
-    entry: entries[journal.currentEntry]
-  }
-}
-
-export default connect(mapStateToProps, { addEntry })(ShowEntry)
+export default ShowEntry

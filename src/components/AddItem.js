@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addItem } from '../actions'
 
 const AddItem = (props) => {
   const [ text, setText ] = useState('')
+  const dispatch = useDispatch()
 
   return (
     <div>
@@ -19,7 +20,7 @@ const AddItem = (props) => {
 
       <button
         onClick={() => {
-          props.addItem(props.entryIndex, text)
+          dispatch(addItem(props.entryIndex, text))
           setText('')
         }}
       >+</button>
@@ -29,4 +30,4 @@ const AddItem = (props) => {
 
 
 
-export default connect(null, { addItem })(AddItem)
+export default AddItem

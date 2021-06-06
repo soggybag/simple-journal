@@ -1,59 +1,70 @@
-# Simple Journal
+# Getting Started with Create React App
 
-A simple Bullet Journal. Try it out [here](https://soggybag.github.io/simple-journal/).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-In a nut shell the Simple Journal consists of a series of bullet point lists. Items in a list are marked with a status. 
+## Available Scripts
 
-- `X` (completed)
-- `>` (for tomorrow) 
-- `<` (save for later)
-- and a few others 
+In the project directory, you can run:
 
-When making a new entry items from the list marked `>` (for later) are moved to the next entry list. 
+### `yarn start`
 
-Imagine an entry as a list of daily todos and reminders. And items being items in an entry list. 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The app uses React for View managment and Redux for state management. The app persists data using local storage. All of the data will be saved on the device where they were created and will reappear each time you open the app. 
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Todo
+### `yarn test`
 
-- Contributions
-  - Add Contribution guidelines
-  - Move todos to issues and tag
-- List items can be arranged
-  - Drag to arrange? 
-  - Arrow to move up/down?
-- Add editable title to each entry
-  - Generate default Entry title with short date - `09/19/19`
-- Ideas for possible features
-  - Add timer to items to get time spent
-  - Badge shows number of times an item has been passed along to a new entry
-- Save for later 
-  - Move `<` items to saved for later list
-  - Add a reducer for saved for later
-- Add New Journal
-  - Group entires under journals
-- Add styles 
-  - Basic font styles 
-    - Use the framework?
-  - Layout
-    - Move list of Entries to left column
-    - Mockup layouts
-  - Status Selector styles
-    - Web Component?
-    - CSS Drop Down?s
-    - Existing React component?
-- Add notifications 
-  - Reminder to add events at the beginning of the day
-  - Reminder at the end of the day
-- ~~Should automatically navigate to the new entry after clicking new entry~~ 
-  - Prevents confusion as users wonder if a new entry was created.
-- ~~Post to Github Pages~~
-- ~~Adding an entry should grab the Items with status `>`~~
-- ~~New Entry button functional~~
-- ~~Remove Add Entry section at top~~
-- ~~Use Local Storage~~
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Contributions 
+### `yarn build`
 
-Coming soon...
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
