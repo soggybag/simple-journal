@@ -13,13 +13,13 @@ export const ShowEntry = (props) => {
   return (
     <div>
       <h1>Show Entry</h1>
-      <h2>{props.entry.name}</h2>
+      <h2>{entry.name}</h2>
       <ListItems />
-      <AddItem entryIndex={props.currentEntry} />
+      <AddItem entryIndex={currentEntry} />
       <div>
         <button
           onClick={() => {
-            dispatch(addEntry(null, props.entriesLength))
+            dispatch(addEntry(null, entriesLength))
           }}
         >New Entry</button>
       </div>
